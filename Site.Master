@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="tomasmartinek.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head runat="server">
+    <title>tomasmartinek.net</title>
+    <link href="styles/myCSS.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/menu.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- slider gallery -->
+    <link href="styles/smoothDivScroll.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.smoothDivScroll-1.1-min.js"></script>
+    
+    <%--spustim rozpoznani aktivniho odkazu--%>
+    <script type="text/javascript" src="Scripts/activeLink.js"></script>
+    <script>
+    window.onload = setActive;
+    </script>
+
+    <%--<script type="text/javascript">
+        $(window).load(function () {
+            $("div#makeMeScrollable").smoothDivScroll({
+                autoScroll: "onstart",
+                autoScrollDirection: "backandforth",
+                autoScrollStep: 1,
+                autoScrollInterval: 15,
+                startAtElementId: "startAtMe",
+                visibleHotSpots: "always"
+            });
+        });
+    </script>--%>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+<form runat="server">
+    
+<div id="container">
+
+    <%--H L A V I C K A--%>
+    <div id="hlavicka">
+        <a href="Default.aspx" title="home">
+            <asp:Label ID="tomasmartinek" runat="server" Text="tomasmartinek.net" style="font-size:1.7em;"></asp:Label>
+         </a>
+    </div> 
+
+    <%-- N A V I G A C E --%>
+    <div id="navigace">
+            <asp:Menu ID="menu1" runat="server" Orientation="Horizontal" SkipLinkText="" 
+                onmenuitemclick="menu1_MenuItemClick" 
+                CssClass="navigace" 
+                DynamicMenuItemStyle-CssClass="navigace"
+                DynamicHoverStyle-CssClass="navigace"
+                DynamicSelectedStyle-CssClass="navigace"
+                DynamicMenuStyle-CssClass="navigace" >
+
+                <Items>
+                    <asp:MenuItem Text="PHOTO" Value="PHOTO" Selectable="false" >
+                        <asp:MenuItem Text="People" Value="People" Selectable="false">
+                            <asp:MenuItem Text="Nadja"    Value="2001"/>
+                            <asp:MenuItem Text="Lenka"    Value="2002"/>
+                        </asp:MenuItem>
+                        
+                        <asp:MenuItem Text="Places" Value="Places" Selectable="false">
+                            <asp:MenuItem Text="Edinburgh"      Value="3001"/>
+                            <asp:MenuItem Text="London"         Value="3002"/>
+                            <asp:MenuItem Text="Prague"         Value="3003"/>
+                            <asp:MenuItem Text="Scotland"       Value="3004"/>
+                            <asp:MenuItem Text="St. Andrews"    Value="3005" />
+                        </asp:MenuItem>
+                        
+                        <asp:MenuItem Text="Projects" Value="Projects" Selectable="false">
+                            <asp:MenuItem Text="Jurkovic`s house"       Value="4001"/>
+                            <asp:MenuItem Text="Life in Prague"         Value="4002"/>
+                            <asp:MenuItem Text="TSTO with Nadja"        Value="4003" ToolTip="This Side or The Other with Nadja Navratilova"/>
+                            <asp:MenuItem Text="TSTO with Pavel"        Value="4004" ToolTip="This Side or The Other with Pavel Mikeska"/>
+                        </asp:MenuItem>
+
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="VIDEO" Value="Video" Selectable="false" >
+                        <asp:MenuItem Text="THE LAST RUN"       Value="1008" ></asp:MenuItem>
+                        <asp:MenuItem Text="Autoportrait"       Value="1007"></asp:MenuItem>
+                        <asp:MenuItem Text="NADJA#2011"         Value="1006"></asp:MenuItem>
+                        <asp:MenuItem Text="'80'"               Value="1005"></asp:MenuItem>
+                        <asp:MenuItem Text="THIS IS MY LIFE"    Value="1004"></asp:MenuItem>
+                        <asp:MenuItem Text="Goodbye London"     Value="1003"></asp:MenuItem>
+                        <asp:MenuItem Text="NINTH LIFE"         Value="1002"></asp:MenuItem>
+                        <asp:MenuItem Text="Today and Tomorrow" Value="1001"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="ABOUT" Value="About" NavigateUrl="~/About.aspx">
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>
+    </div>  
+
+    <div id="wrapper">
+        <%--O B S A H --%>
+        <div id="obsah" >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    <%--P A T I C K A--%>
+    <div id="paticka">
+        <asp:ContentPlaceHolder ID="PatickaContent" runat="server">
+                        
+            <ul id="navy">            
+            <li><a href="News.aspx?id=5001" id="5001">1</a></li>
+            <li class="shit">|</li>
+            <li><a href="News.aspx?id=5002" id="5002">2</a></li>
+            <li class="shit">|</li>
+            <li><a href="News.aspx?id=5003" id="5003">3</a></li>
+            <li class="shit">|</li>
+            <li><a href="News.aspx?id=5004" id="5004">4</a></li>
+            <li class="shit">|</li>
+            <li><a href="News.aspx?id=5005" id="5005">5</a></li>
+            <li class="shit">|</li>
+            <li><a href="News.aspx?id=5006" id="5006">6</a></li>
+            <li class="shit">|</li>
+            <li><a href="News.aspx?id=5007" id="5007">7</a></li>
+            </ul>
+          
+
+        </asp:ContentPlaceHolder>   
+    </div>
+
+</div>  
+</form>
+</body>
+</html>

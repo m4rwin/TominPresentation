@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="">
+      <siteMapNode url="" title="PHOTO2"  description="">
+        <siteMapNode url="" title="People"  description="">
+
+        </siteMapNode>
+        <siteMapNode url="" title="Places"  description="" >
+
+        </siteMapNode>
+        <siteMapNode url="" title="Projects"  description="">
+
+        </siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode url="" title="VIDEO2"  description="">
+        <siteMapNode url="" title="a"  description=""/>
+        <siteMapNode url="" title="b"  description=""/>
+      </siteMapNode>
+
+      <siteMapNode url="" title="ABOUT2"  description="">
+
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

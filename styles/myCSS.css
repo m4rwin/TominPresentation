@@ -1,0 +1,189 @@
+﻿/* MY DIV
+----------------------------------------------------------*/
+div#container   {padding:10px 20px 10px 20px;}
+div#wrapper     {float:left; width:100%;}
+div#hlavicka    {height:30px; width:auto;}
+div#navigace    {height:20px; margin: 0px auto; width: 22.4em;}
+div#obsah       {width:100%; height: 510px;}
+div#navigace2   {width:100%; }
+div#paticka     {clear:left; height: 40px;margin-left:auto; margin-right:auto; width:17.2em; }
+
+
+div#obsah p{line-height:1.4}
+
+/* font */
+div#hlavicka    {  text-align:center; font-size:1.2em;}
+div#navigace    {  text-align:left;  font-size:0.85em;}
+div#navigace2   {  }
+div#obsah       {  }
+div#paticka     {  letter-spacing: 0.1em;}
+
+/* color */
+div#container   {background:; }
+div#wrapper     {background:; }
+div#hlavicka    {background:;    }
+div#navigace    {background:;   }
+div#obsah       {background:;   color:Black;}
+div#navigace2   {background:;   }
+div#paticka     {background:;  color:Black;}
+
+/* MY FONTS
+----------------------------------------------------------*/
+@font-face {
+  font-family: MYgothic;
+  src: url(../fonts/Gothic.TTF);
+}
+
+/* ACTIVE NAVY
+---------------------------------------------------------*/
+ul#navy .shit
+{
+    cursor: default;
+}
+
+ul#navy li a.active {
+  color: #8e9092;
+}
+
+ul#navy li
+{
+    color: Black;
+    display:inline;
+    cursor: default;
+    list-style:none none;
+}
+
+ul#navy a:hover
+{
+    color: #8e9092;
+}
+
+
+/* TABLES
+---------------------------------------------------------*/
+table#videoTable
+{
+    width:700px;
+    color: White;
+    background-color: inherit;
+    clear: none;    
+    text-align: center;
+}
+
+table#videoTable td
+{
+    height: 20px;
+}
+
+/* DEFAULTS
+----------------------------------------------------------*/
+html,body{margin:0;padding:0}
+
+body   
+{
+    font-family: MYgothic sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font: 76% MYgothic,sans-serif;
+}
+
+a:link, a:visited
+{
+    color: Black;
+    text-decoration: none;
+    
+}
+
+/*
+a{display:block;color: #981793;padding:10px;}
+*/
+
+a:hover
+{
+    color: Black;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #8e9092;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+h1
+{
+
+}
+
+h2
+{
+
+}
+
+h3
+{
+
+}
+
+h4
+{
+
+}
+
+h5, h6
+{
+    
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+#navlist {
+    width:900px;
+    padding:0;
+    margin:0 auto;
+    list-style-type:none;
+ }
+#navlist li {
+    float:left;
+    width:145px;
+    margin-right:5px;
+ }
+#navlist a {
+    display:block;
+    width:100%;
+    line-height:24px;
+    
+    
+    color:Green;
+    text-align:center;
+    text-decoration:none;
+ }
+
+#navlist a:hover {
+    color:Yellow;
+ }
+#navlist a:active {
+    color:Red;
+ }

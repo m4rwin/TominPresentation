@@ -1,0 +1,111 @@
+﻿
+div#navigace 
+{
+    /* padding-bottom je mezera mezi menu a dalsi divem */    
+    padding-bottom:15px;
+}
+
+/* remove all the bullets, borders and padding from the default list styling */
+div#navigace ul {padding:0;margin:0;list-style-type:none;}
+
+/* style the sub-level lists */
+div#navigace ul ul {width:15em;}
+/* float the top list items to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+div#navigace ul li {float:left;height:3em;line-height:3em;}
+/* style the sub level list items */
+div#navigace ul ul li {display:block;width:12em;height:auto;position:relative;line-height:1em;}
+
+/* style the links for the top level */
+div#navigace a, div#navigace a:visited 
+{
+    display:block;
+    float:left;
+    height:100%;
+    font-size:1em;
+    text-decoration:none;
+    color:Black; 
+    padding:0 3em 0 1em;
+}
+
+
+
+
+
+/* style the sub level links */
+div#navigace ul ul a, div#navigace ul ul a:visited 
+{
+    display:block;
+    background:White;
+    color:Black;
+    width:12em;
+    height:100%;
+    line-height:1em; 
+    padding:0.5em 1em;
+}
+div#navigace ul table ul a, div#navigace ul table ul a:visited {width:14em; width:12em;}
+
+
+/* B A C K G R O U N D */
+/* 1.level */
+div#navigace ul :hover a.sub1 {}
+div#navigace ul a.top {}
+/* 2.level */
+div#navigace ul ul :hover a.sub2 {}
+/* 3.level */
+div#navigace ul ul ul a, .navigace ul ul ul a:visited {}
+/* 4.level */
+div#navigace ul ul ul ul a, .navigace ul ul ul ul a:visited {}
+
+
+
+
+
+
+
+/* style the level hovers */
+/* 1.level */
+div#navigace a:hover               {color:#8e9092;   background:inherit; width:inherit;}
+div#navigace :hover > a            {color:#8e9092;   background:inherit; width:inherit;}
+/* 2.level */
+div#navigace ul ul a:hover         {color:White;   background:Black; width:inherit;}
+div#navigace ul ul :hover > a      {color:White;   background:Black; width:inherit;}
+/* 3.level */
+div#navigace ul ul ul a:hover      {color:White;   background:#116dca;}
+div#navigace ul ul ul :hover > a   {color:White;   background:#116dca;}
+/* 4.level */
+div#navigace ul ul ul ul a:hover   {color:White;   background:#116dca;}
+
+
+
+
+
+
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+div#navigace ul ul {visibility:hidden;position:absolute;height:0;top:3em;left:0;width:14em;}
+/* position the third level flyout menu */
+div#navigace ul ul ul{left:14em;top:0;width:14em;}
+/* position the third level flyout menu for a left flyout */
+div#navigace ul ul ul.left {left:-14em;}
+/* make the second level visible when hover on first level list OR link */
+div#navigace ul li:hover ul, div#navigace ul a:hover ul {visibility:visible; height:auto; padding-bottom:3em; background:transparent url(images/trans.gif);}
+/* keep the third level hidden when you hover on first level list OR link */
+div#navigace ul :hover ul ul{visibility:hidden;}
+/* keep the fourth level hidden when you hover on second level list OR link */
+div#navigace ul :hover ul :hover ul ul{visibility:hidden;}
+/* make the third level visible when you hover over second level list OR link */
+div#navigace ul :hover ul :hover ul{visibility:visible;}
+/* make the fourth level visible when you hover over third level list OR link */
+div#navigace ul :hover ul :hover ul :hover ul {visibility:visible;} 
+
+
+
+
+/* IE */
+/* style the table so that it takes no part in the layout - required for IE to work */
+/*div#navigace table {position:absolute; left:0; top:0; font-size:1em; z-index:-1;}*/
+div#navigace ul ul table {left:-1px;}
+div#navigace ul ul table ul.left {margin-left:2px;}
+div#navigace li:hover {position:relative;}
+div#navigace a:hover {position:relative;}
